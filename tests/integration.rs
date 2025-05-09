@@ -90,7 +90,7 @@ impl LxcCommander for MockLxcCommander {
 }
 
 const TEST_CONTAINER_NAME: &str = "test-container";
-const TEST_TEMPLATE: &str = "ubuntu"; // Testlerde kullanılacak varsayılan template
+const TEST_TEMPLATE: &str = "ubuntu"; // default template
 
 // Tests
 #[test]

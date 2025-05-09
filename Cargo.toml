@@ -1,7 +1,16 @@
 [package]
 name = "rust-lxc"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
+authors = ["Ozgur <ozgur@goosey.org>"]
+description = "`rust-lxc` is a Rust bindings for LXC"
+license = "MIT"
+repository = "https://github.com/ta2ozg/rust-lxc"
+readme = "README.md"
+keywords = ["rust", "lxc", "container"]
+categories = ["api-bindings"]
+documentation = "https://docs.rs/rust-lxc"
+homepage = "https://github.com/ta2ozg/rust-lxc"
 
 [lib]
 name = "rust_lxc"
@@ -9,4 +18,4 @@ path = "src/lib.rs"
 
 [dependencies]
 clap = { version = "4.5", features = ["derive"] }
-anyhow = "1.0" # Hata yönetimi için
+anyhow = "1.0" # error handling
