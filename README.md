@@ -29,10 +29,13 @@ With `rust-lxc`, you can perform the following operations:
 ## Installation
 
 [dependencies]
-- rust-lxc = "1.0.1"
 
-- use rust_lxc::cli::{Cli, Commands};
-- use rust_lxc::commands;
+rust-lxc = "1.0.1"
+
+
+use rust_lxc::cli::{Cli, Commands};
+
+use rust_lxc::commands;
 
 ### 1. Clone the project
 
