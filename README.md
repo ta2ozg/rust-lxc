@@ -1,5 +1,4 @@
-
-# rust-lxc
+# 🔍 rust-lxc
 
 `rust-lxc` is a Rust bindings for LXC.
 
@@ -7,6 +6,8 @@
 
 LXC is the well-known and heavily tested low-level Linux container runtime. It is in active development since 2008 and has proven itself in critical production environments world-wide. Some of its core contributors are the same people that helped to implement various well-known containerization features inside the Linux kernel.
 This package implements Rust bindings for the LXC C API (`liblxc`).
+
+---
 
 ## Features
 
@@ -19,6 +20,13 @@ With `rust-lxc`, you can perform the following operations:
 - **List all containers** (`ls`)
 - **Shutdown a container** (`shutdown`)
 
+### Add to your `Cargo.toml`
+
+```toml
+[dependencies]
+rust-lxc = { git = "https://github.com/ta2ozg/rust-lxc" }
+```
+
 ## Dependencies
 
 - Rust 2024 Edition
@@ -26,16 +34,13 @@ With `rust-lxc`, you can perform the following operations:
 - `anyhow` (for error handling)
 - `liblxc` (C-based library for LXC containers)
 
-## Installation
+## Testing
 
-[dependencies]
+```bash
+cargo test
+```
 
-rust-lxc = "1.0.1"
-
-
-use rust_lxc::cli::{Cli, Commands};
-
-use rust_lxc::commands;
+---
 
 ### 1. Clone the project
 
@@ -101,10 +106,6 @@ cargo run -- shutdown --name mycontainer
 - **`lxc.rs`**: All operations related to LXC containers are defined in this file. Creating, starting, stopping, and deleting containers happen here.
 - **`main.rs`**: This is the entry point of the program. It processes the CLI commands and calls the appropriate functions.
 
-### FFI (Foreign Function Interface)
-
-FFI is used to bridge Rust with the C-based `liblxc` library. This allows Rust to directly call `liblxc` functions and manage LXC containers.
-
 ### Commands
 
 The following commands are available in this project:
@@ -116,22 +117,14 @@ The following commands are available in this project:
 - `ls`: Lists all available containers.
 - `shutdown`: Shuts down a container.
 
-### Tests
-
-Integration tests are included in the `tests` directory to verify the functionality of container creation, starting, stopping, and deletion.
-
-### Running Tests
-
-To run the tests:
-
-```bash
-cargo test
-```
-
 ## Contributing
 
-If you would like to contribute to this project, feel free to submit pull requests or open issues for bugs or feature suggestions.
+PRs, ideas and bug reports are welcome.  
+Want to extend the library or implement more endpoints? Let’s build it together!
 
-## License
+---
 
+## 📄 License
+
+Licensed under the MIT License.  
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
