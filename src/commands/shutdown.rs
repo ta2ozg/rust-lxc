@@ -1,9 +1,8 @@
-use crate::lxc;
 use anyhow::Result;
+use crate::lxc::lxc_shutdown;
 
 pub fn run(name: &str) -> Result<()> {
-    println!("Shutting down container: {}", name);
-    lxc::lxc_shutdown(name)?;
-    println!("Container {} shut down successfully", name);
+    lxc_shutdown(name)?;
+    println!("Container {} shutdown", name);
     Ok(())
 }

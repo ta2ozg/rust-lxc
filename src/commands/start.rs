@@ -1,9 +1,8 @@
-use crate::lxc;
 use anyhow::Result;
+use crate::lxc::lxc_start;
 
 pub fn run(name: &str) -> Result<()> {
-    println!("Starting container: {}", name);
-    lxc::lxc_start(name)?;
-    println!("Container {} started successfully", name);
+    lxc_start(name)?;
+    println!("Container {} started", name);
     Ok(())
 }

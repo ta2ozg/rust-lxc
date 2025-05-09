@@ -1,9 +1,8 @@
-use crate::lxc;
 use anyhow::Result;
+use crate::lxc::lxc_stop;
 
 pub fn run(name: &str) -> Result<()> {
-    println!("Stopping container: {}", name);
-    lxc::lxc_stop(name)?;
-    println!("Container {} stopped successfully", name);
+    lxc_stop(name)?;
+    println!("Container {} stopped", name);
     Ok(())
 }

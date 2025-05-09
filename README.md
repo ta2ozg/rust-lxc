@@ -59,7 +59,7 @@ After building the project, you can manage containers with the following command
 - **Create a container:**
 
 ```bash
-cargo run -- create --name mycontainer
+cargo run -- create --name mycontainer --template download
 ```
 
 - **Start a container:**

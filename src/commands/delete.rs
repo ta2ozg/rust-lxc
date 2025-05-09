@@ -1,9 +1,8 @@
-use crate::lxc;
 use anyhow::Result;
+use crate::lxc::lxc_delete;
 
 pub fn run(name: &str) -> Result<()> {
-    println!("Deleting container: {}", name);
-    lxc::lxc_delete(name)?;
-    println!("Container {} deleted successfully", name);
+    lxc_delete(name)?;
+    println!("Container {} deleted", name);
     Ok(())
 }
