@@ -1,13 +1,12 @@
 
 # rust-lxc
 
-`rust-lxc` is a binding and managing LXC written in Rust. This project provides an API to manage LXC containers using `liblxc`, leveraging FFI to call `liblxc` functions from Rust.
+`rust-lxc` is a Rust bindings for LXC.
 
 ## Why Rust Bindings for liblxc?
 
-LXC is a powerful container technology that allows us to create lightweight virtual machines on Linux. However, there wasn't a direct Rust API to interact with LXC. This project provides bindings for `liblxc` in Rust, allowing us to manage containers and integrate LXC functionality within Rust projects.
-
-By combining Rust's memory safety, concurrency features and `liblxc`, we can efficiently and securely manage LXC containers.
+LXC is the well-known and heavily tested low-level Linux container runtime. It is in active development since 2008 and has proven itself in critical production environments world-wide. Some of its core contributors are the same people that helped to implement various well-known containerization features inside the Linux kernel.
+This package implements Rust bindings for the LXC C API (`liblxc`).
 
 ## Features
 
@@ -28,6 +27,12 @@ With `rust-lxc`, you can perform the following operations:
 - `liblxc` (C-based library for LXC containers)
 
 ## Installation
+
+[dependencies]
+rust-lxc = "1.0.1"
+
+use rust_lxc::cli::{Cli, Commands};
+use rust_lxc::commands;
 
 ### 1. Clone the project
 
