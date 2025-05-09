@@ -1,4 +1,4 @@
-# 🔍 rust-lxc
+#  🦀 rust-lxc
 
 `rust-lxc` is a Rust bindings for LXC.
 
