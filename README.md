@@ -29,15 +29,15 @@ With `rust-lxc`, you can perform the following operations:
 ## Installation
 
 [dependencies]
-rust-lxc = "1.0.1"
+- rust-lxc = "1.0.1"
 
-use rust_lxc::cli::{Cli, Commands};
-use rust_lxc::commands;
+- use rust_lxc::cli::{Cli, Commands};
+- use rust_lxc::commands;
 
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/yourusername/rust-lxc.git
+git clone https://github.com/ta2ozg/rust-lxc.git
 cd rust-lxc
 ```
 
